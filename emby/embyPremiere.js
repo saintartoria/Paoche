@@ -1,5 +1,6 @@
 if ($request.url.indexOf('mb3admin.com/admin/service/registration/validateDevice') != -1) {
       if($response.status!=200){
+          $notification.post("EmbyPremiere欢迎使用跑车Emby", "", "");
           $done({status: 200, headers: $response.headers, body: '{"cacheExpirationDays":999,"resultCode":"GOOD","message":"Device Valid"}' })
       }else{
           $done({})
